@@ -10,4 +10,35 @@ body {
     color: var(--foreground);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    main {
+        flex: 1 1 auto;
+    }
+}
+
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 46px;
+    line-height: 130%;
+    font-weight: 700;
+}
 /* ----------------------------------------- */
+
