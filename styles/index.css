@@ -2,16 +2,61 @@
 
 :root {
 	--background: #fff;
-	--foreground: #000;
+	--foreground: #011c40;
 }
 
 body {
 	background-color: var(--background);
 	color: var(--foreground);
+	font-family: Montserrat, sans-serif;
+}
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1180px;
 }
 
+.title {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 150%;
+}
 /* ----------------------------------------- */
 
 /* ---Header--- */
 
 /* ---Header end--- */
+
+/* ---Advantages--- */
+.advantages {
+	background: url('../assets/images/advantages/bg.jpeg') center / cover no-repeat;
+	padding: 120px 0;
+}
+.container {
+}
+.advantages__title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+.title {
+}
+.advantages__items {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+}
+.advantages__item {
+	background-color: #fff;
+	padding: 30px 30px 50px 30px;
+	max-width: 360px;
+	img {
+		display: block;
+		margin-bottom: 25px;
+	}
+}
+.advantages__heading {
+	margin-bottom: 20px;
+}
+.advantages__desc {
+}
+/* ---Advantages end--- */
