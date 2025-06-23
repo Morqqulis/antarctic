@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./styles/index.css">
-   <title>Антарктика</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
+
+
+
 <body>
-  <main>
-    <section class="hero">
-      <div>
-        
-   <!-- Header -->
-   <header class="header">
+  <div class="wrapper">
+    <header class="header">
       <div class="container">
-         Header
-      </div>
-   </header>
-   <!-- Header end -->
+        <nav class="header__nav">
+          <a href="/"><img class="header__logo" src="./photos/Frame 6.svg" alt=""></a>
+          <ul class="header__menu">
+            <li><a class="header__link" href="#section1" class="header__link">Преимущества </a></li>
+            <li><a class="header__link" href="#section2" class="header__link">Направления</a></li>
+            <li><a class="header__link" href="#section3" class="header__link">Ближайшие круизы</a></li>
+            <li><a class="header__link" href="#section4" class="header__link">Контакты</a></li>
+          </ul>
 
-  <main>
-    <!-- hero -->
-    <section>
+          <button class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-    </section>
-    <!-- hero end -->
+        </nav>
+    </header>
 
-    <div>
-      <div class="container">
 
-      </div>
-    </div>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span>Круизы в Антарктику Волшебный мир айсбергов и пингвинов</span>
+            </h1>
 
-  </main>
+            <a class="hero__scroll" href="#">
+              Смотреть работы
+              <img src="./photos/Vector.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <h3 id="section1" class="title about__title">Обо мне</h3>
+
+          <p class="p1">Приветствую всех на своём сайте! Меня зовут Иван, я из Киева. Занимаюсь
+            фронтенд-разработкой
+            более
+            года. До разработки занимался нелюбимым делом, ходил на нелюбимую работу, не мог понять за что
+            взяться,
+            чтобы дело приносило удовольствие и деньги, пока не наткнулся на один интересный курс.</p>
+          <p class="p2">С тех пор прошел огонь, воду и медные трубы. Учёба давалась по-разному: где-то легче,
+            где-то
+            сложнее. Каждодневная работа над навыками и усердие, с которым я подходил к обучению, уже через
+            несколько
+            месяцев принесли плоды - я взял первый заказ на фрилансе. С отзывами клиентов и примерами работ
+            можно
+            ознакомиться ниже.</p>
+        </div>
+
+      </section>
+
+
+
+    </main>
+
+  </div>
+
+
+
+
+  <script src="./scripts/index.js"></script>
 </body>
+
+
+
 </html>

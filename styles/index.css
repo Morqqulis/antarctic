@@ -1,13 +1,8 @@
-@import './reset.css';
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-:root {
-	--background: #fff;
-	--foreground: #000;
-}
-
-body {
-	background-color: var(--background);
-	color: var(--foreground);
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow-x: hidden;
 
     main {
         flex: 1 1 auto;
@@ -39,12 +35,233 @@ body {
     font-size: 46px;
     line-height: 130%;
     font-weight: 700;
+
+
+    @media(max-width: 991.98px) {
+        font-size: 40px;
+    }
+
+    @media(max-width: 767.98px) {
+        font-size: 34px;
+    }
 }
-/* ----------------------------------------- */
+
+
+
+/* -------------------------------------------- */
+
+.header {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    color: white;
+
+    @media(max-width: 767.98px) {
+        top: 20px;
+    }
+}
+
+.header__logo {
+    position: relative;
+    z-index: 50;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.header__menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    z-index: 30;
+
+    @media(max-width: 991.98px) {
+        gap: 18px;
+    }
+
+    @media(max-width: 767.98px) {
+        position: absolute;
+        top: -2000%;
+        left: 0;
+        flex-direction: column;
+        z-index: 20;
+        transition: all 1s ease;
+        background-color: blue;
+        padding-top: 100px;
+        width: 100%;
+        min-height: 100vh;
+
+        .menu-open & {
+            top: -20px;
+        }
+    }
+}
+
+.header__link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    transition: all .3s ease;
+
+    &:hover {
+        color: yellow;
+        scale: 1.1;
+    }
+
+}
+
+.header__burger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    z-index: 50;
+
+    @media(max-width: 767.98px) {
+        display: block;
+    }
+
+    span {
+        background-color: white;
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        transition: all .3s ease;
+        transform: translate(-50% 0px);
+
+        &:nth-child(1) {
+            top: 0;
+
+            .menu-open & {
+                transform: translate(-45%) rotate(-45deg);
+                top: 45%;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+
+            .menu-open & {
+                scale: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+
+            .menu-open & {
+                bottom: 45%;
+                transform: translate(-45%) rotate(45deg);
+            }
+        }
+    }
+}
+
+.header__logo {
+    transition: all .3s ease;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
 
 
 
 
-/* ---Header--- */
+.hero {
+    position: relative;
+    background: url('./photos/background\ image.png') center / cover no-repeat;
+    position: relative;
+    color: #fff;
 
-/* ---Header end--- */
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(35, 82, 222, 0.5);
+        z-index: 1;
+    }
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.hero__title {
+    font-size: 90px;
+    max-width: 550px;
+
+    @media(max-width: 767.98px) {
+        font-size: 44px;
+    }
+
+    span {
+        display: block;
+        font-size: 48px;
+
+        @media(max-width: 767.98px) {
+            font-size: 32px;
+        }
+    }
+}
+
+.hero__scroll {
+
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about {
+    padding: 140px 0;
+
+    @media(max-width: 991.98px) {
+        padding: 90px 0;
+    }
+
+    @media(max-width: 767.98px) {
+        padding: 40px 0;
+    }
+}
+
+.about__title {
+    margin-bottom: 60px;
+
+    @media(max-width: 767.98px) {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+.p2 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.title2 {
+    font-size: 48px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+/* -------------------------------- */
